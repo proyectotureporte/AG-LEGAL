@@ -1,6 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export function proxy(request: NextRequest) {
+  // La aplicación no usa Server Actions. Rechazar este canal reduce superficie
+  // de ataque y evita que escáneres externos alcancen el decodificador de React.
+  if (request.headers.has("next-action")) {
+    return new NextResponse("Not Found", {
+      status: 404,
+      headers: {
+        "Cache-Control": "no-store",
+        "Content-Type": "text/plain; charset=utf-8",
+      },
+    });
+  }
+
   const nonce = btoa(crypto.randomUUID());
   const development = process.env.NODE_ENV !== "production";
   const policy = [
