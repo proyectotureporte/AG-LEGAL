@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AG Legal · Revisión de créditos UVR de vivienda de interés social (2002–2005)</title>
+
+<!-- ============================================================
+     LANDING · AG LEGAL  ·  index.html
+     Estructura del proyecto:
+       index.html
+       css/styles.css
+       js/main.js        (compilado — lo que carga esta página)
+       src/main.ts       (fuente TypeScript; compilar con: npx tsc)
+       tsconfig.json
+       img/  →  colocar aquí las imágenes con ESTOS nombres:
+         img/logo-ag-legal.png    Logo (navbar y footer)
+         img/hero-familia.jpg     Foto héroe: familia frente a su casa
+     ============================================================ -->
+
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ======================= NAVEGACIÓN ======================= -->
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a href="#" class="nav__logo" aria-label="AG Legal — inicio">
+        <img class="nav__logo-img" src="img/logo-ag-legal.png" alt="AG Legal">
+      </a>
+      <nav class="nav__links" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#como-funciona">¿Cómo funciona?</a>
+        <a href="#faq">Preguntas frecuentes</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <a href="#revision" class="btn btn--gold btn--pill">Consultar mi caso</a>
+    </div>
+  </header>
+
+  <!-- ========================= HÉROE ========================= -->
+  <section class="hero" id="inicio">
+    <div class="hero__media">
+      <img src="img/hero-familia.jpg" alt="Familia sonriente frente a su vivienda">
+    </div>
+    <div class="wrap">
+      <div class="hero__copy">
+        <h1 class="hero__title">
+          <span class="l1"><span class="q">¿</span>Compró</span>
+          <span class="l2">vivienda</span>
+          <span class="l3">de interés social entre</span>
+          <span class="l4">2002 y 2005<span class="q">?</span></span>
+        </h1>
+        <p class="hero__lead">
+          Podría haber <strong>pagado más de lo debido</strong> en su
+          <span class="uvr">crédito UVR</span>
+        </p>
+        <div class="hero__actions">
+          <a href="#revision" class="btn btn--blue">Quiero revisar mi caso</a>
+          <a href="https://wa.me/573001234567" class="btn btn--wa">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.5.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.3z"/></svg>
+            Hablar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BARRA DE CONFIANZA ==================== -->
+  <section class="trust-wrap">
+    <div class="wrap">
+      <div class="trust">
+        <div class="trust__item">
+          <span class="trust__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.2" r="3.6"/><path d="M5 20v-.6a7 7 0 0 1 14 0v.6"/></svg>
+          </span>
+          <p class="trust__text">Estudio de documentos <b>SIN COSTO</b></p>
+        </div>
+        <div class="trust__item">
+          <span class="trust__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6.5v11M15 9.2c0-1.2-1.3-2-3-2s-3 .8-3 2 1 1.7 3 2 3 .9 3 2.1-1.3 2-3 2-3-.8-3-2"/></svg>
+          </span>
+          <p class="trust__text">No paga <b>anticipos</b></p>
+        </div>
+        <div class="trust__item">
+          <span class="trust__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5L13.5 3z"/><path d="M13.5 3v5.5H19"/><path d="M8.5 12.5h7M8.5 15.5h5"/></svg>
+          </span>
+          <p class="trust__text">Profesionales <b class="navy">especializados</b></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BANDA "NO SE PONE EN RIESGO" ============ -->
+  <section class="riskband-wrap">
+    <div class="wrap">
+      <div class="riskband">
+        <span class="riskband__icon">
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v5.5c0 5-3.4 8.6-8 10.5-4.6-1.9-8-5.5-8-10.5V5.5l8-3z"/><path d="M8.8 12.2L12 9.5l3.2 2.7"/><path d="M9.8 11.6v3.9h4.4v-3.9"/></svg>
+        </span>
+        <div>
+          <h2 class="riskband__title">SU VIVIENDA <em>NO SE PONE EN RIESGO</em></h2>
+          <p class="riskband__text">
+            Nuestro objetivo es revisar su situación y orientarlo con claridad,
+            sin poner en peligro su patrimonio.
+          </p>
+        </div>
+        <span class="riskband__deco" aria-hidden="true">
+          <svg width="92" height="92" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5L12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5.5h4V20"/></svg>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== ¿CÓMO FUNCIONA? =================== -->
+  <section class="how" id="como-funciona">
+    <div class="wrap">
+      <h2 class="how__title">¿Cómo funciona?</h2>
+      <div class="how__grid">
+
+        <article class="hstep">
+          <span class="hstep__num">1</span>
+          <div class="hstep__icon">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 4h3A1.5 1.5 0 0 1 20 5.5v6a1.5 1.5 0 0 1-1.5 1.5H17l-2 2.3V13h-1"/><path d="M4 6.5A1.5 1.5 0 0 1 5.5 5h7A1.5 1.5 0 0 1 14 6.5v5a1.5 1.5 0 0 1-1.5 1.5H9l-2.5 2.8V13h-1A1.5 1.5 0 0 1 4 11.5v-5z"/><path d="M7 8.3h4M7 10.4h2.5"/></svg>
+          </div>
+          <h3 class="hstep__title">Cuéntanos tu caso</h3>
+          <p class="hstep__text">Diligencia nuestro formulario o escríbenos por WhatsApp con tus datos y cuéntanos sobre tu crédito.</p>
+        </article>
+
+        <span class="how__arrow" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </span>
+
+        <article class="hstep">
+          <span class="hstep__num">2</span>
+          <div class="hstep__icon">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5L13.5 3z"/><path d="M13.5 3v5.5H19"/><path d="M8.3 12h5M8.3 14.8h3"/><circle cx="15.2" cy="15.2" r="3.1" fill="#fff"/><path d="M14 15.3l.9.9 1.6-1.8"/></svg>
+          </div>
+          <h3 class="hstep__title">Revisamos tu información</h3>
+          <p class="hstep__text">Analizamos tu crédito UVR con el equipo legal y la documentación que nos compartas, sin costo ni compromiso.</p>
+        </article>
+
+        <span class="how__arrow" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+        </span>
+
+        <article class="hstep">
+          <span class="hstep__num">3</span>
+          <div class="hstep__icon">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9.5L6 7l4 1 3.5-2 2.5 1.5"/><path d="M6 7l4.8 4.4a1.6 1.6 0 0 0 2.2 0l.7-.7a1.6 1.6 0 0 1 2.2 0l3.6 3.4"/><path d="M2.5 9.5v6M21.5 8v7.5"/><path d="M6 16.5l2 1.8a2 2 0 0 0 2.6.1"/><path d="M9 18.5l1.6 1.4a2 2 0 0 0 2.6 0l.8-.7"/></svg>
+          </div>
+          <h3 class="hstep__title">Te orientamos sobre los pasos siguientes</h3>
+          <p class="hstep__text">Si aplica, le explicamos cómo podemos ayudarle.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== ELEGIBILIDAD + FORMULARIO ============== -->
+  <section class="offer" id="revision">
+    <div class="wrap offer__grid">
+
+      <!-- Esto puede ser para ti si... -->
+      <aside class="elig">
+        <h2 class="elig__title">Esto puede ser para ti si...</h2>
+        <ul class="elig__list">
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
+            Compraste vivienda VIS
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
+            Tuviste un crédito hipotecario en UVR
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
+            Su crédito fue entre los años 2002 y 2005
+          </li>
+          <li>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg>
+            Quiere saber si pagó más de lo debido
+          </li>
+        </ul>
+        <div class="elig__tip">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 18h5M10.2 21h3.6"/><path d="M12 3a6 6 0 0 0-3.8 10.6c.8.7 1.3 1.5 1.3 2.4h5c0-.9.5-1.7 1.3-2.4A6 6 0 0 0 12 3z"/></svg>
+          <span>Cada caso es único. Permítanos revisarlo y orientarlo con claridad.</span>
+        </div>
+      </aside>
+
+      <!-- Formulario -->
+      <div class="uform" id="uform-card">
+        <h2 class="uform__title">Solicite hoy la revisión de su crédito</h2>
+
+        <form id="form-revision" action="#" method="post" novalidate>
+          <div class="uform__row">
+            <div class="field">
+              <label for="f-nombre">Nombre completo <span>*</span></label>
+              <input type="text" id="f-nombre" name="nombre" placeholder="Ej: Juan Pérez" autocomplete="name">
+              <p class="field__error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="f-celular">Celular/WhatsApp <span>*</span></label>
+              <input type="tel" id="f-celular" name="celular" placeholder="Ej: 300 123 4567" autocomplete="tel" inputmode="tel">
+              <p class="field__error" role="alert"></p>
+            </div>
+          </div>
+
+          <div class="uform__row">
+            <div class="field">
+              <label for="f-ciudad">Ciudad <span>*</span></label>
+              <select id="f-ciudad" name="ciudad">
+                <option value="" selected>Seleccione su ciudad</option>
+              </select>
+              <p class="field__error" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="f-anio">Año del crédito <span>*</span></label>
+              <select id="f-anio" name="anio">
+                <option value="" selected>Seleccione el año</option>
+              </select>
+              <p class="field__error" role="alert"></p>
+            </div>
+          </div>
+
+          <div class="consent">
+            <input type="checkbox" id="f-consent" name="consent">
+            <label for="f-consent">
+              Autorizo el tratamiento de mis datos personales conforme a la
+              <a href="#" rel="noopener">política de privacidad</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--gold btn--block">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2.5L10.8 13.2M21.5 2.5l-6.8 19-3.9-8.3-8.3-3.9 19-6.8z"/></svg>
+            Solicitar revisión
+          </button>
+        </form>
+
+        <!-- Estado de confirmación (lo muestra js/main.js al enviar) -->
+        <div class="uform__ok" role="status">
+          <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"/><path d="M7.8 12.4l2.8 2.8 5.6-6"/></svg>
+          <h3>¡Solicitud recibida!</h3>
+          <p>Gracias por confiar en nosotros. Un miembro del equipo legal te contactará muy pronto para revisar tu caso.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= PREGUNTAS FRECUENTES ================= -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h2 class="faq__title">Preguntas frecuentes</h2>
+      <div class="faq__grid">
+
+        <div class="faq__item">
+          <button type="button" class="faq__q">
+            ¿Esto tiene costo?
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__a"><p>No. El estudio inicial de tus documentos no tiene costo ni compromiso, y tampoco pagas anticipos.</p></div>
+        </div>
+
+        <div class="faq__item">
+          <button type="button" class="faq__q">
+            ¿Aplica en todo Colombia?
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__a"><p>Sí. Atendemos casos de cualquier ciudad del país; la revisión se hace de forma virtual.</p></div>
+        </div>
+
+        <div class="faq__item">
+          <button type="button" class="faq__q">
+            ¿Mi vivienda corre riesgo?
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__a"><p>No. Solo revisamos documentación y te orientamos con claridad; tu patrimonio no se pone en riesgo.</p></div>
+        </div>
+
+        <div class="faq__item">
+          <button type="button" class="faq__q">
+            ¿Qué documentos necesito?
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__a"><p>Idealmente la escritura o el pagaré del crédito y extractos o certificación del banco. Si no los tienes a la mano, te guiamos para conseguirlos.</p></div>
+        </div>
+
+        <div class="faq__item">
+          <button type="button" class="faq__q">
+            ¿Cómo sé si mi crédito fue en UVR?
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__a"><p>Si tu cuota o saldo se expresaba en UVR (unidades que cambian con la inflación), probablemente lo fue. Compártenos tus documentos y lo verificamos por ti.</p></div>
+        </div>
+
+        <div class="faq__item">
+          <button type="button" class="faq__q">
+            ¿Cuánto tarda la revisión?
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="faq__a"><p>Una vez recibimos tus documentos, normalmente entre 5 y 10 días hábiles. Te contactamos con el resultado y los pasos a seguir.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= PIE DE PÁGINA ======================= -->
+  <footer class="footer" id="contacto">
+    <div class="wrap footer__grid">
+
+      <div class="footer__brand">
+        <span class="footer__logo">
+          <img src="img/logo-ag-legal.png" alt="AG Legal">
+        </span>
+        <p class="footer__desc">
+          Revisión documental y jurídica de créditos UVR (2002–2005)
+          vivienda de interés social.
+        </p>
+      </div>
+
+      <a class="footer__wa" href="https://wa.me/573001234567">
+        <span class="footer__wa-icon">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.5 14.1c-.2.7-1.3 1.3-1.9 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.8-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5l-.3.5-.5.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.3z"/></svg>
+        </span>
+        <span><b>WhatsApp</b><span>300 123 4567</span></span>
+      </a>
+
+      <div class="footer__info">
+        <span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>
+          acciongrupalcol@gmail.com
+        </span>
+        <span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.7 2.6 4 5.7 4 9s-1.3 6.4-4 9c-2.7-2.6-4-5.7-4-9s1.3-6.4 4-9z"/></svg>
+          www.aglegal.com.co
+        </span>
+        <span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          Atención en todo el país
+        </span>
+      </div>
+
+      <div class="footer__social">
+        <p>Síguenos</p>
+        <div class="footer__social-row">
+          <a href="#" aria-label="Facebook de AG Legal">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3V11H9v3h2.3v7h2.2z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram de AG Legal">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
