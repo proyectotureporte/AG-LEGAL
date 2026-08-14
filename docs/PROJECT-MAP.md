@@ -8,7 +8,7 @@ Actualizado: 2026-08-15
 | --- | --- |
 | Web y API | Next.js 16 App Router, React 19 y TypeScript |
 | Persistencia | PostgreSQL `aglegal_db`, Drizzle ORM y migraciones versionadas |
-| Correo | Resend; remitente objetivo `aglegal@restaurar.co` |
+| Correo | SMTP TLS de HostDime; buzón y remitente `aglegal@restaurar.co` |
 | Producción | PM2 `aglegal` en `127.0.0.1:4009`, publicado por Caddy |
 | Dominio | `https://aglegal.restaurar.co` |
 

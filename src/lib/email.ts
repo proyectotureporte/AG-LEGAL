@@ -1,6 +1,6 @@
 import "server-only";
 
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 import { env } from "@/lib/env";
 
@@ -24,31 +24,38 @@ const escapeHtml = (value: string) =>
 
 export async function sendSolicitudNotification(
   solicitud: SolicitudEmail,
-): Promise<"enviado" | "omitido"> {
-  if (!env.RESEND_API_KEY) return "omitido";
-
-  const resend = new Resend(env.RESEND_API_KEY);
+): Promise<"enviado"> {
   const fecha = solicitud.creadoEn.toLocaleString("es-CO", {
     timeZone: "America/Bogota",
     dateStyle: "long",
     timeStyle: "short",
   });
 
-  const { error } = await resend.emails.send(
-    {
-      from: env.EMAIL_FROM,
-      to: [env.FORM_NOTIFICATION_EMAIL],
-      subject: `Nueva solicitud AG Legal · ${solicitud.nombre}`,
-      text: [
-        "Nueva solicitud de revisión de crédito UVR",
-        `Nombre: ${solicitud.nombre}`,
-        `Celular/WhatsApp: ${solicitud.celular}`,
-        `Ciudad: ${solicitud.ciudad}`,
-        `Año del crédito: ${solicitud.anio}`,
-        `Fecha: ${fecha}`,
-        `Identificador: ${solicitud.id}`,
-      ].join("\n"),
-      html: `
+  const transporter = nodemailer.createTransport({
+    host: env.SMTP_HOST,
+    port: env.SMTP_PORT,
+    secure: env.SMTP_SECURE,
+    auth: { user: env.SMTP_USER, pass: env.SMTP_PASSWORD },
+    tls: { minVersion: "TLSv1.2" },
+    connectionTimeout: 10_000,
+    greetingTimeout: 10_000,
+    socketTimeout: 20_000,
+  });
+
+  await transporter.sendMail({
+    from: env.EMAIL_FROM,
+    to: env.FORM_NOTIFICATION_EMAIL,
+    subject: `Nueva solicitud AG Legal · ${solicitud.nombre}`,
+    text: [
+      "Nueva solicitud de revisión de crédito UVR",
+      `Nombre: ${solicitud.nombre}`,
+      `Celular/WhatsApp: ${solicitud.celular}`,
+      `Ciudad: ${solicitud.ciudad}`,
+      `Año del crédito: ${solicitud.anio}`,
+      `Fecha: ${fecha}`,
+      `Identificador: ${solicitud.id}`,
+    ].join("\n"),
+    html: `
         <h1>Nueva solicitud de revisión</h1>
         <table cellpadding="8" cellspacing="0" border="1" style="border-collapse:collapse">
           <tr><th align="left">Nombre</th><td>${escapeHtml(solicitud.nombre)}</td></tr>
@@ -58,11 +65,8 @@ export async function sendSolicitudNotification(
           <tr><th align="left">Fecha</th><td>${escapeHtml(fecha)}</td></tr>
         </table>
       `,
-      tags: [{ name: "source", value: "aglegal_form" }],
-    },
-    { idempotencyKey: `aglegal-solicitud-${solicitud.id}` },
-  );
+    headers: { "X-Entity-Ref-ID": solicitud.id },
+  });
 
-  if (error) throw new Error("El proveedor de correo rechazó la notificación");
   return "enviado";
 }
