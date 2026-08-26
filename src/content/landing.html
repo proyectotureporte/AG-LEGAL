@@ -7,15 +7,7 @@
 
 <!-- ============================================================
      LANDING · AG LEGAL  ·  index.html
-     Estructura del proyecto:
-       index.html
-       css/styles.css
-       js/main.js        (compilado — lo que carga esta página)
-       src/main.ts       (fuente TypeScript; compilar con: npx tsc)
-       tsconfig.json
-       img/  →  colocar aquí las imágenes con ESTOS nombres:
-         img/logo-ag-legal.png    Logo (navbar y footer)
-         img/hero-familia.jpg     Foto héroe: familia frente a su casa
+     Recursos visuales optimizados en /public/images/aglegal.
      ============================================================ -->
 
 <link rel="stylesheet" href="css/styles.css">
@@ -28,7 +20,7 @@
   <header class="nav">
     <div class="wrap nav__inner">
       <a href="#" class="nav__logo" aria-label="AG Legal — inicio">
-        <img class="nav__logo-img" src="img/logo-ag-legal.png" alt="AG Legal">
+        <img class="nav__logo-img" src="/images/aglegal/logo.webp" alt="AG Legal" width="360" height="360">
       </a>
       <nav class="nav__links" aria-label="Navegación principal">
         <a href="#inicio">Inicio</a>
@@ -42,8 +34,10 @@
 
   <!-- ========================= HÉROE ========================= -->
   <section class="hero" id="inicio">
-    <div class="hero__media">
-      <img src="img/hero-familia.jpg" alt="Familia sonriente frente a su vivienda">
+    <div class="hero__media" aria-hidden="true">
+      <span class="hero__halo"></span>
+      <img src="/images/aglegal/familia.webp" alt="" width="1141" height="1400" fetchpriority="high">
+      <span class="hero__seal">Orientación<br><strong>clara y segura</strong></span>
     </div>
     <div class="wrap">
       <div class="hero__copy">
@@ -73,21 +67,15 @@
     <div class="wrap">
       <div class="trust">
         <div class="trust__item">
-          <span class="trust__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8.2" r="3.6"/><path d="M5 20v-.6a7 7 0 0 1 14 0v.6"/></svg>
-          </span>
+          <span class="trust__icon"><img src="/images/aglegal/atencion-personal.webp" alt="" width="221" height="240"></span>
           <p class="trust__text">Estudio de documentos <b>SIN COSTO</b></p>
         </div>
         <div class="trust__item">
-          <span class="trust__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6.5v11M15 9.2c0-1.2-1.3-2-3-2s-3 .8-3 2 1 1.7 3 2 3 .9 3 2.1-1.3 2-3 2-3-.8-3-2"/></svg>
-          </span>
+          <span class="trust__icon"><img src="/images/aglegal/sin-anticipos.webp" alt="" width="240" height="240"></span>
           <p class="trust__text">No paga <b>anticipos</b></p>
         </div>
         <div class="trust__item">
-          <span class="trust__icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5L13.5 3z"/><path d="M13.5 3v5.5H19"/><path d="M8.5 12.5h7M8.5 15.5h5"/></svg>
-          </span>
+          <span class="trust__icon"><img src="/images/aglegal/profesionales.webp" alt="" width="211" height="240"></span>
           <p class="trust__text">Profesionales <b class="navy">especializados</b></p>
         </div>
       </div>
@@ -98,9 +86,7 @@
   <section class="riskband-wrap">
     <div class="wrap">
       <div class="riskband">
-        <span class="riskband__icon">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3v5.5c0 5-3.4 8.6-8 10.5-4.6-1.9-8-5.5-8-10.5V5.5l8-3z"/><path d="M8.8 12.2L12 9.5l3.2 2.7"/><path d="M9.8 11.6v3.9h4.4v-3.9"/></svg>
-        </span>
+        <span class="riskband__icon"><img src="/images/aglegal/proteccion-vivienda.webp" alt="" width="235" height="280"></span>
         <div>
           <h2 class="riskband__title">SU VIVIENDA <em>NO SE PONE EN RIESGO</em></h2>
           <p class="riskband__text">
@@ -108,9 +94,7 @@
             sin poner en peligro su patrimonio.
           </p>
         </div>
-        <span class="riskband__deco" aria-hidden="true">
-          <svg width="92" height="92" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5L12 4l9 7.5"/><path d="M5.5 10v10h13V10"/><path d="M10 20v-5.5h4V20"/></svg>
-        </span>
+        <span class="riskband__deco" aria-hidden="true"><img src="/images/aglegal/vivienda.webp" alt="" width="320" height="297"></span>
       </div>
     </div>
   </section>
@@ -123,9 +107,7 @@
 
         <article class="hstep">
           <span class="hstep__num">1</span>
-          <div class="hstep__icon">
-            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 4h3A1.5 1.5 0 0 1 20 5.5v6a1.5 1.5 0 0 1-1.5 1.5H17l-2 2.3V13h-1"/><path d="M4 6.5A1.5 1.5 0 0 1 5.5 5h7A1.5 1.5 0 0 1 14 6.5v5a1.5 1.5 0 0 1-1.5 1.5H9l-2.5 2.8V13h-1A1.5 1.5 0 0 1 4 11.5v-5z"/><path d="M7 8.3h4M7 10.4h2.5"/></svg>
-          </div>
+          <div class="hstep__icon"><img src="/images/aglegal/conversacion.webp" alt="" width="280" height="249"></div>
           <h3 class="hstep__title">Cuéntanos tu caso</h3>
           <p class="hstep__text">Diligencia nuestro formulario o escríbenos por WhatsApp con tus datos y cuéntanos sobre tu crédito.</p>
         </article>
@@ -136,9 +118,7 @@
 
         <article class="hstep">
           <span class="hstep__num">2</span>
-          <div class="hstep__icon">
-            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13.5 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8.5L13.5 3z"/><path d="M13.5 3v5.5H19"/><path d="M8.3 12h5M8.3 14.8h3"/><circle cx="15.2" cy="15.2" r="3.1" fill="#fff"/><path d="M14 15.3l.9.9 1.6-1.8"/></svg>
-          </div>
+          <div class="hstep__icon"><img src="/images/aglegal/revision-documental.webp" alt="" width="222" height="280"></div>
           <h3 class="hstep__title">Revisamos tu información</h3>
           <p class="hstep__text">Analizamos tu crédito UVR con el equipo legal y la documentación que nos compartas, sin costo ni compromiso.</p>
         </article>
@@ -149,9 +129,7 @@
 
         <article class="hstep">
           <span class="hstep__num">3</span>
-          <div class="hstep__icon">
-            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 9.5L6 7l4 1 3.5-2 2.5 1.5"/><path d="M6 7l4.8 4.4a1.6 1.6 0 0 0 2.2 0l.7-.7a1.6 1.6 0 0 1 2.2 0l3.6 3.4"/><path d="M2.5 9.5v6M21.5 8v7.5"/><path d="M6 16.5l2 1.8a2 2 0 0 0 2.6.1"/><path d="M9 18.5l1.6 1.4a2 2 0 0 0 2.6 0l.8-.7"/></svg>
-          </div>
+          <div class="hstep__icon"><img src="/images/aglegal/acuerdo.webp" alt="" width="280" height="183"></div>
           <h3 class="hstep__title">Te orientamos sobre los pasos siguientes</h3>
           <p class="hstep__text">Si aplica, le explicamos cómo podemos ayudarle.</p>
         </article>
@@ -166,6 +144,7 @@
 
       <!-- Esto puede ser para ti si... -->
       <aside class="elig">
+        <img class="elig__art" src="/images/aglegal/orientacion.webp" alt="" width="270" height="280">
         <h2 class="elig__title">Esto puede ser para ti si...</h2>
         <ul class="elig__list">
           <li>
@@ -315,7 +294,7 @@
 
       <div class="footer__brand">
         <span class="footer__logo">
-          <img src="img/logo-ag-legal.png" alt="AG Legal">
+          <img src="/images/aglegal/logo.webp" alt="AG Legal" width="360" height="360">
         </span>
         <p class="footer__desc">
           Revisión documental y jurídica de créditos UVR (2002–2005)
@@ -349,10 +328,10 @@
         <p>Síguenos</p>
         <div class="footer__social-row">
           <a href="#" aria-label="Facebook de AG Legal">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3V11H9v3h2.3v7h2.2z"/></svg>
+            <img src="/images/aglegal/facebook.webp" alt="" width="144" height="144">
           </a>
           <a href="#" aria-label="Instagram de AG Legal">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+            <img src="/images/aglegal/instagram.webp" alt="" width="144" height="144">
           </a>
         </div>
       </div>

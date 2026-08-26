@@ -13,9 +13,7 @@ async function getLandingMarkup() {
   const body = source.match(/<body>([\s\S]*?)<\/body>/i)?.[1];
   if (!body) throw new Error("No se encontró el contenido de la landing");
 
-  return body
-    .replaceAll("img/logo-ag-legal.png", "/images/logo-ag-legal.png")
-    .replaceAll("img/hero-familia.jpg", "/images/hero-familia.jpg");
+  return body;
 }
 
 export default async function Home() {

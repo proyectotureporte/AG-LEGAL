@@ -1,12 +1,13 @@
 # AG Legal — mapa del proyecto
 
-Actualizado: 2026-08-15
+Actualizado: 2026-08-26
 
 ## Arquitectura
 
 | Capa | Implementación |
 | --- | --- |
 | Web y API | Next.js 16 App Router, React 19 y TypeScript |
+| Diseño | Landing HTML en `src/content/landing.html`, sistema visual en `src/app/landing.css` y recursos oficiales optimizados en `public/images/aglegal/` |
 | Persistencia | PostgreSQL `aglegal_db`, Drizzle ORM y migraciones versionadas |
 | Correo | SMTP TLS de HostDime; buzón y remitente `aglegal@restaurar.co` |
 | Producción | PM2 `aglegal` en `127.0.0.1:4009`, publicado por Caddy |
@@ -16,7 +17,7 @@ Actualizado: 2026-08-15
 
 | Ruta | Acceso | Función |
 | --- | --- | --- |
-| `/` | Pública | Landing original y formulario de revisión |
+| `/` | Pública | Landing institucional y formulario de revisión |
 | `POST /api/solicitudes` | Pública, mismo origen | Valida, limita abuso, persiste y notifica una solicitud |
 | `/panel/login` | Pública | Inicio de sesión del administrador único |
 | `/panel` | Sesión válida en servidor | Tabla paginada con los datos enviados en el formulario |
@@ -40,6 +41,12 @@ Los únicos datos visibles en `/panel` son los recibidos en el formulario y su f
 3. PostgreSQL guarda la solicitud antes de intentar el correo; un fallo del proveedor no pierde el registro.
 4. El panel valida la cookie `HttpOnly`, el token opaco almacenado como HMAC, la caducidad y el navegador asociado.
 5. Un login correcto invalida cualquier sesión administrativa anterior.
+
+## Diseño público
+
+- `docs/DESIGN.md` documenta los tokens, la tipografía, el motivo de marca y los componentes de la landing.
+- Los recursos de identidad se sirven como WebP optimizados; el banner familiar prioritario pesa menos de 200 KB.
+- El rediseño es exclusivamente visual: las clases e identificadores consumidos por `LandingInteractions` se mantienen estables.
 
 ## Operación
 
