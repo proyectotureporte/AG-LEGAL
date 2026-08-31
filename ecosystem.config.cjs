@@ -4,7 +4,7 @@ module.exports = {
       name: "aglegal",
       cwd: "/var/www/aglegal",
       script: "node_modules/next/dist/bin/next",
-      args: "start -H 127.0.0.1 -p 4009",
+      args: "start -H 127.0.0.1 -p 3004",
       instances: 1,
       exec_mode: "fork",
       autorestart: true,
@@ -15,7 +15,7 @@ module.exports = {
       listen_timeout: 10_000,
       env: {
         NODE_ENV: "production",
-        PORT: "4009",
+        PORT: "3004",
       },
     },
   ],

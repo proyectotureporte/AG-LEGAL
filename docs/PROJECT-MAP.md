@@ -1,6 +1,6 @@
 # AG Legal — mapa del proyecto
 
-Actualizado: 2026-08-26
+Actualizado: 2026-08-31
 
 ## Arquitectura
 
@@ -10,8 +10,8 @@ Actualizado: 2026-08-26
 | Diseño | Landing HTML en `src/content/landing.html`, sistema visual en `src/app/landing.css` y recursos oficiales optimizados en `public/images/aglegal/` |
 | Persistencia | PostgreSQL `aglegal_db`, Drizzle ORM y migraciones versionadas |
 | Correo | SMTP TLS de HostDime; buzón y remitente `aglegal@restaurar.co` |
-| Producción | PM2 `aglegal` en `127.0.0.1:4009`, publicado por Caddy |
-| Dominio | `https://aglegal.restaurar.co` |
+| Producción | VPS Restaurar (`82.223.109.156`), PM2 `aglegal` en `127.0.0.1:3004`, publicado por Nginx |
+| Dominio | `https://ag-legal.com.co` |
 
 ## Rutas y contratos
 
@@ -54,3 +54,4 @@ Los únicos datos visibles en `/panel` son los recibidos en el formulario y su f
 - `pnpm typecheck && pnpm lint && pnpm build`: verificación previa.
 - `./deploy.sh`: actualización, migración, build, recarga PM2 y healthcheck.
 - Secretos: únicamente en `/var/www/aglegal/.env` con permisos `600` y en GitHub Actions.
+- El CI despliega exclusivamente en el VPS Restaurar mediante una clave SSH restringida al comando de despliegue.

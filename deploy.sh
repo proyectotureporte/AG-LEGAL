@@ -2,7 +2,7 @@
 set -Eeuo pipefail
 
 readonly APP_DIR="/var/www/aglegal"
-readonly HEALTH_URL="http://127.0.0.1:4009/api/health"
+readonly HEALTH_URL="http://127.0.0.1:3004/api/health"
 
 cd "$APP_DIR"
 

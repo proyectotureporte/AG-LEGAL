@@ -13,7 +13,7 @@
 - Consultas parametrizadas mediante Drizzle/pg y salida escapada por React.
 - CSP con nonce, bloqueo de iframes, HSTS, `nosniff`, política de referentes y permisos mínimos.
 - Rechazo temprano de `Next-Action`: la app no usa Server Actions y no expone su decodificador.
-- Secretos fuera de Git y aplicación enlazada solo a `127.0.0.1`; Caddy es la única entrada pública.
+- Secretos fuera de Git y aplicación enlazada solo a `127.0.0.1`; Nginx es la única entrada pública.
 
 ## Límites conscientes
 

@@ -5,7 +5,7 @@ import { z } from "zod";
 const environmentSchema = z.object({
   NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
   DATABASE_URL: z.string().startsWith("postgresql://"),
-  PORT: z.coerce.number().int().min(1).max(65_535).default(4009),
+  PORT: z.coerce.number().int().min(1).max(65_535).default(3004),
   APP_URL: z.url(),
   ADMIN_USERNAME: z.string().min(3).max(64),
   ADMIN_PASSWORD_HASH: z.string().startsWith("$argon2id$").min(50),
