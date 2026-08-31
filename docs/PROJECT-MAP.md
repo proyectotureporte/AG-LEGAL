@@ -53,5 +53,6 @@ Los únicos datos visibles en `/panel` son los recibidos en el formulario y su f
 - `pnpm db:migrate`: aplica migraciones.
 - `pnpm typecheck && pnpm lint && pnpm build`: verificación previa.
 - `./deploy.sh`: actualización, migración, build, recarga PM2 y healthcheck.
+- PostgreSQL en el VPS Restaurar autoriza cada pareja usuario/base explícitamente por TCP; AG Legal usa el socket local con SCRAM mediante `host=%2Fvar%2Frun%2Fpostgresql` y no modifica esa política global.
 - Secretos: únicamente en `/var/www/aglegal/.env` con permisos `600` y en GitHub Actions.
 - El CI despliega exclusivamente en el VPS Restaurar mediante una clave SSH restringida al comando de despliegue.
