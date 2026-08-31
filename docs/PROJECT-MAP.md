@@ -11,7 +11,7 @@ Actualizado: 2026-08-31
 | Persistencia | PostgreSQL `aglegal_db`, Drizzle ORM y migraciones versionadas |
 | Correo | SMTP TLS de HostDime; buzón y remitente `aglegal@restaurar.co` |
 | Producción | VPS Restaurar (`82.223.109.156`), PM2 `aglegal` en `127.0.0.1:3004`, publicado por Nginx |
-| Dominio | `https://ag-legal.com.co` |
+| Dominio | `https://aglegal.restaurar.co` temporalmente; `ag-legal.com.co` está pendiente de delegación por el registrador |
 
 ## Rutas y contratos
 
