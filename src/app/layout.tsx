@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aglegal.restaurar.co"),
+  metadataBase: new URL("https://aglegal.com.co"),
   title: "AG Legal · Revisión de créditos UVR",
   description:
     "Revisión documental y jurídica de créditos UVR para vivienda de interés social adquirida entre 2002 y 2005.",

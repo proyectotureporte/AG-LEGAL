@@ -1,6 +1,6 @@
 # AG Legal — mapa del proyecto
 
-Actualizado: 2026-08-31
+Actualizado: 2026-09-08
 
 ## Arquitectura
 
@@ -11,7 +11,7 @@ Actualizado: 2026-08-31
 | Persistencia | PostgreSQL `aglegal_db`, Drizzle ORM y migraciones versionadas |
 | Correo | SMTP TLS de HostDime; buzón y remitente `aglegal@restaurar.co` |
 | Producción | VPS Restaurar (`82.223.109.156`), PM2 `aglegal` en `127.0.0.1:3004`, publicado por Nginx |
-| Dominio | `https://aglegal.restaurar.co` temporalmente; `ag-legal.com.co` está pendiente de delegación por el registrador |
+| Dominio | `https://aglegal.com.co` es el canónico; `www` y `https://aglegal.restaurar.co` redirigen al canónico |
 
 ## Rutas y contratos
 
@@ -56,3 +56,4 @@ Los únicos datos visibles en `/panel` son los recibidos en el formulario y su f
 - PostgreSQL en el VPS Restaurar autoriza cada pareja usuario/base explícitamente por TCP; AG Legal usa el socket local con SCRAM mediante `host=%2Fvar%2Frun%2Fpostgresql` y no modifica esa política global.
 - Secretos: únicamente en `/var/www/aglegal/.env` con permisos `600` y en GitHub Actions.
 - El CI despliega exclusivamente en el VPS Restaurar mediante una clave SSH restringida al comando de despliegue.
+- Nginx conserva el dominio temporal durante la propagación. El timer `aglegal-domain-activate.timer` emite el certificado y cambia `APP_URL` de forma atómica cuando el DNS público responde.
