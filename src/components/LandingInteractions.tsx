@@ -182,6 +182,12 @@ export function LandingInteractions() {
           });
           const result = await response.json().catch(() => ({})) as { error?: string };
           if (!response.ok) throw new Error(result.error || "No fue posible enviar la solicitud.");
+          try {
+            (window as unknown as { restaurarTrack?: (n: string, m?: Record<string, string>) => void })
+              .restaurarTrack?.("lead", { form: "revision-uvr" });
+          } catch {
+            /* la analítica nunca rompe el formulario */
+          }
           card.classList.add("is-sent");
           card.scrollIntoView({ behavior: "smooth", block: "center" });
         } catch (error) {

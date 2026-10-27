@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
 
+import { headers } from "next/headers";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,10 +17,20 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const nonce = (await headers()).get("x-nonce") ?? undefined;
   return (
     <html lang="es-CO">
-      <body>{children}</body>
+      <body>
+        {children}
+        <script
+          defer
+          src="https://restaurar.co/m.js"
+          data-site="aglegal"
+          data-exclude="/panel,/api"
+          nonce={nonce}
+        />
+      </body>
     </html>
   );
 }
